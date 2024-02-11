@@ -1,0 +1,93 @@
+.image_grid {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.row {
+    display: grid;
+    gap: .2rem;
+    /* grid-template-areas: 'col1 col2 col3 col4 col5 col6'; */
+}
+
+.column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    object-fit: fill;
+}
+
+.row1 {
+    grid-template-columns: repeat(2, 1fr) repeat(2, 2fr) repeat(2, 1fr);
+    /* grid-template-areas: 'col1 col2 col3 col4 col5 col6'; */
+}
+
+.row2 {
+    grid-template-columns: 1.5fr repeat(4, 1fr) 1.5fr;
+    /* grid-template-areas: 'col7 col8 col9 col10 col11 col12'; */
+}
+
+.image_grid img {
+    object-fit: cover;
+    object-position: 30% 30%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 0.2rem);
+    background: rgba(0,0,0,.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+}
+
+.column:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+.arrow_icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    color: white;
+}
+
+.custom_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 0.2rem);
+    background-color: rgba(128,128,128,1);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity:1;
+    transition: background-color 0.3s ease;
+  }
+
+  .column:hover .custom_overlay {
+    opacity: .8;
+    background-color: rgba(128,128,128,.8);
+  }
+
+
+
