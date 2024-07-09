@@ -1,11 +1,10 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import React from 'react'
 import Hero from './components/Hero'
 import CustomGrid from './components/CustomGrid'
 
 export default function Home() {
   return (
-    <div>
+      <div>
       <Hero />
       <CustomGrid />
     </div>
